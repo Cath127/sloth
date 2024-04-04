@@ -82,10 +82,9 @@ h1 {
   /* BUTTONS */
   .btn {
     font-size: 1.8rem;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     width: 50rem;
-    text-align: center;
-    border: 0.1rem solid #56a5eb;
+    border: 0.3rem solid #56a5eb;
     margin-bottom: 1rem;
     text-decoration: none;
     text-align: center;
