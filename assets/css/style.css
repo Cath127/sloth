@@ -22,18 +22,16 @@ h4 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #56a5eb;
     margin-bottom: 5rem;
     text-align: center;
     border: 0.3rem solid green;
-    border-radius: 2rem;
+    border-radius: 30%;
     background-color: bisque;
+    width: 18rem;
+    height: 15rem;
   }
-
-.p {
-    font-size: 3rem;
-}
   
   .intro-container {
     width: 100vw;
