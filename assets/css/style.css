@@ -40,13 +40,21 @@ h2 {
     font-size: 3rem;
 }
 
+h3 {
+  text-align: center;
+}
+
  /*---------- INTRO CONTAINER ----------*/
   #intro-container {
     width: 80vw;
     height: 100vh;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
     max-width: 80rem;
     margin: 0 auto;
   }
@@ -69,9 +77,11 @@ h2 {
   .game-container {
    background-color: aqua;
    padding: 1.25rem 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
   }
 
  .question-prefix {
