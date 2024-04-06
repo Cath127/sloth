@@ -160,7 +160,6 @@ h3 {
 /* created using tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I */
 
 #modal-container {
-  background-color:brown;
   position: fixed;
   top: 0;
   left: 0;
@@ -171,6 +170,7 @@ h3 {
   justify-content: center;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .modal {
@@ -180,7 +180,7 @@ h3 {
   width: 37.5rem;
   max-width: 100%;
   padding: 2rem 3rem;
-  box-shadow: 10px 10px 8px brown;
+  border: 0.3rem solid green;
   text-align: center;
 }
 
