@@ -1,7 +1,7 @@
 
 
 html, body {
-    background: url(../images/sloth-background.png) no-repeat top center;
+    background: url(../images/small-sloth-logo.png) no-repeat top center;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -121,6 +121,7 @@ h2 {
 
 .modal {
   background-color: white;
+  border-radius: 3rem;
   color: #274A27;
   width: 37.5rem;
   max-width: 100%;
