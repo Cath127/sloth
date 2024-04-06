@@ -134,6 +134,18 @@ h2 {
     color: #fff;
   }
 
+#btn-next {
+    background: #274A27;
+    color: #fff;
+    width: 8rem;
+    border-radius: 3rem;
+    border: 0;
+    padding: 1rem;
+    margin: 1.25rem auto 0;
+    cursor: pointer;
+    display: none;
+}
+
   /*---------- MODAL ----------*/
 /* created using tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I */
 
