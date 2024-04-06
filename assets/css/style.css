@@ -77,11 +77,11 @@ h2 {
     background-color: #edddc6;
   }
   
-  /* .btn:hover {
+  .btn:hover {
     cursor: pointer;
     background-color: greenyellow;
     box-shadow: 10px 10px 8px brown;
-  } */
+  }
   
   .btn[disabled]:hover {
     cursor: not-allowed;
@@ -103,11 +103,9 @@ h2 {
   }
 
   /*---------- MODAL ----------*/
-/* created using tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I
- Making the modal container show on the whole screen, centering the contents */
+/* created using tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I */
 
 #modal-container {
-  background-color: red;
   position: fixed;
   top: 0;
   left: 0;
@@ -129,34 +127,11 @@ h2 {
   text-align: center;
 }
 
-/* #modal-container {
-    background-color: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    opacity: 0;
-    pointer-events: none;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
- }
+#modal-container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
 
  
-
-
- #modal-container.show {
-    opacity: 1;
-    pointer-events: auto;
- }
-
- .modal {
-    background-color: white;
-    width: 37.5rem;
-    padding: 2rem 3rem;
-    max-width: 100%;
-    border-radius: 3rem;
-    box-shadow: 10px 10px 8px brown;
-    text-align: center;
- }  */

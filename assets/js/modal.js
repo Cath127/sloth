@@ -1,17 +1,17 @@
 // MODAL
 // Modal created using tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I
 
-const openModal = document.getElementById("open-model");
+const openModal = document.getElementById("open-modal");
 
-const modal-container = document.getElementById("modal-container")
+const modalContainer = document.getElementById("modal-container")
 
 const closeModal = document.getElementById("close-modal")
 
-open.addEventListener("click", () => {
-    modal-container.classList.add("show");
+openModal.addEventListener("click", () => {
+    modalContainer.classList.add("show");
 });
 
-close.addEventListener("click", () => {
-    modal-container.classList.remove("show");
+closeModal.addEventListener("click", () => {
+    modalContainer.classList.remove("show");
 });
 
