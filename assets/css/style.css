@@ -106,6 +106,7 @@ h2 {
 /* created using tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I */
 
 #modal-container {
+  background-color:brown;
   position: fixed;
   top: 0;
   left: 0;
@@ -120,6 +121,7 @@ h2 {
 
 .modal {
   background-color: white;
+  color: #274A27;
   width: 37.5rem;
   max-width: 100%;
   padding: 2rem 3rem;
