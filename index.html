@@ -12,14 +12,25 @@
       
 </head>
 <body>
-    <section class="intro-container">
-        <div id="home" class="flex-center flex-column">
+     <div id="intro-container" class="flex-center flex-column">
             <h1>Super Sloth Quiz<img src="assets/images/new-sloth-logo.png"  alt="picture of a cartoon sloth hanging upside down in a tree wearing a red cape"></h1>
-            
-            <a href="game.html" class="btn">Play <i class="fa-solid fa-play"></i></a>
-            <button id="open-modal" class="btn">Rules <i class="fa-solid fa-circle-info"></i></button>
+                <a href="game.html" class="btn">Play <i class="fa-solid fa-play"></i></a>
+                <button id="open-modal" class="btn">Rules <i class="fa-solid fa-circle-info"></i></button>
+     </div>
+   
+     <!-- Modal Container -->
+     <div id="modal-container">
+        <div class="modal">
+            <h2>How to Play</h2>
+
+            <p>There are 10 questions.</p>
+            <p>If you answer right the box turns green but if you answer wrong the box turns red.</p>
+            <p>Can you get all 10 right to become a Super Sloth?</p>
+            <p>Good luck</p>
+
+            <button id="close-modal">Close Me</button>
         </div>
-    </section> 
+     </div>
 
      <!--Font Awesome script-->
      <script src="https://kit.fontawesome.com/54a37ef757.js" crossorigin="anonymous"></script>
