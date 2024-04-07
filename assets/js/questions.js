@@ -107,4 +107,4 @@ const questions = [
           { text: "leaves", correct: correct },
           { text: "fish", correct: false },
         ],
-    },
+    }

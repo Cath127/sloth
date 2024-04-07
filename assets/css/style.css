@@ -25,15 +25,15 @@ h4 {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: #274A27;
     margin-bottom: 5rem;
     text-align: center;
     border: 0.3rem solid green;
     border-radius: 30%;
     background-color: #edddc6;
-    width: 18rem;
-    height: 15rem;
+    width: 60%;
+    height: 12rem;
   }
 
 h2 {
@@ -45,18 +45,26 @@ h3 {
 }
 
  /*---------- INTRO CONTAINER ----------*/
-  #intro-container {
-    width: 80vw;
-    height: 100vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    position: absolute;
+  #main-container {
+    /* background-color:rgba(255,255,255,0.5) */
+    background-color: aqua;
+    padding: 1.25rem 0;
+   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 80%;
+    /* width: 80vw;
+    height: 100vh; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* position: absolute; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
     max-width: 80rem;
-    margin: 0 auto;
+    margin: 0 auto; */
   }
   
   .flex-column {
@@ -92,7 +100,7 @@ h3 {
 .btn {
     font-size: 1.8rem;
     padding: 1rem 0;
-    width: 15rem;
+    width: 50%;
     text-align: center;
     border: 0.3rem solid green;
     border-radius: 3rem;
