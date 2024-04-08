@@ -8,6 +8,7 @@ let score = 0;  //Always starts at zero//
 let questionCounter = 0; //What questions you are on//
 let availableQuestions = [];  //Copy of full question set and take questions out as we use them to always find a unique question - DO I need this?//
 
+//Let used for questions so the order can be random//
 let questions = [
     {
         question: "What is the average lifespan of sloths in the wild?",
@@ -101,6 +102,15 @@ startGame() => {
     score = 0;
     availableQuestions = [...questions];  //To get questions - don't need this
     console.log(availableQuestions);
+    getNewQuestion();
 }
+
+//TO ADD 1 TO THE ANSWERS WHEN CORRECT
+getNewQuestion = () => {
+    questionCounter++;
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);  //To get a random question - may need to put it somewhere else
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerText = currentQuestion.question;
+};
 
 startGame();
