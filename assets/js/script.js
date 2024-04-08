@@ -111,25 +111,26 @@ getNewQuestion = () => {
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);  //To get a random question - may need to put it somewhere else
     currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
+    question.innertext = currentQuestion.question;
 
     choices.forEach((choice) => {
         const number = choice.dataset['number'];
-        choice.innerHTML = currentQuestion['choice' + number];  //To get the right answer using data number
+        choice.innerText = currentQuestion['choice' + number];  //To get the right answer using data number
     });
 
-    availableQuesions.splice(questionIndex, 1); //Gets rid of the question - may not need this
+    availableQuestions.splice(questionIndex, 1); //Gets rid of the question - may not need this
     acceptingAnswers = true; //Allows user to answer
 }; 
 
 choices.forEach((choice) => {
     choice.addEventListener('click', (e) => {
-        // console.log(e.target);
+        //console.log(e.target);
         if (!acceptingAnswers) return;  //If not ready for the player to click the answer
 
         acceptingAnswers = false;  //To make a delay
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
+        console.log(selectedAnswer)
         getNewQuestion();
     }); 
 });
