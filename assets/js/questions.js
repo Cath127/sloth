@@ -9,7 +9,6 @@ const questions = [
           { text: "40-45 years", correct: false },
         ],
     },
-    
     {
         question: "How many hours does it take for a sloth to digest a meal",
     
@@ -20,7 +19,6 @@ const questions = [
           { text: "72-96 hours", correct: false },
         ],
     },
-
     {
         question: "Which of the following is true about sloths fur?",
     
