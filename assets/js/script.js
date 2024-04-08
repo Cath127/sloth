@@ -97,13 +97,13 @@ const CORRECT_BONUS = 10;  //How much a right question is worth//
 const MAX_QUESTIONS = 3; // How many questions does a user get - Dont need this// 
 
 //START GAME
-startGame() => {
+startGame = () => {
     questioncounter = 0; //Make sure the counter is starting at zero - probably is so may not need this//
     score = 0;
     availableQuestions = [...questions];  //To get questions - don't need this
     console.log(availableQuestions);
     getNewQuestion();
-}
+};
 
 //TO ADD 1 TO THE ANSWERS WHEN CORRECT
 getNewQuestion = () => {
@@ -111,6 +111,22 @@ getNewQuestion = () => {
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);  //To get a random question - may need to put it somewhere else
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
-};
+
+    choices.forEach((choice) => {
+        const number = choice.dataset['number'];
+        choice.innerHTML = currentQuestion['choice' + number];  //To get the right answer using data number
+    });
+
+    availableQuesions.splice(questionIndex, 1); //Gets rid of the question - may not need this
+    acceptingAnswers = true; //Allows user to answer
+}; 
+
+choices.forEach((choice) => {
+    
+    choice.addEventListener('click', (e) => {
+        console.log(e.target);
+    });
+});
+
 
 startGame();
