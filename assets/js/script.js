@@ -1,14 +1,15 @@
-
+//Get DOM Elements
 const question = document.getElementById('question');
-const choices = Array.from(document.getElementsByClassName('choice-text'));
+const choices = Array.from(document.getElementsByClassName('choice-text')); // This converts the choices text from an Html collection to an array
 
+//Variables
 let currentQuestion = {};
-let acceptingAnswer = false;  //To create a delay - Do I need this?//
-let score = 0;  //Always starts at zero//
-let questionCounter = 0; //What questions you are on//
-let availableQuestions = [];  //Copy of full question set and take questions out as we use them to always find a unique question - DO I need this?//
+let acceptingAnswers = false;  //To create a delay - Do I need this?
+let score = 0;  //Always starts at zero
+let questionCounter = 0; //What questions you are on
+let availableQuestions = [];  //Copy of full question set and take questions out as we use them to always find a unique question - DO I need this?
 
-//Let used for questions so the order can be random//
+//Let used for questions so the order can be random
 let questions = [
     {
         question: "What is the average lifespan of sloths in the wild?",
@@ -76,11 +77,11 @@ let questions = [
     },
     {
         question: "Which sense is the best for sloths?",
-        choice1: "sight",
+        choice1: "smell",
         choice2: "taste",
         choice3: "touch",
-        choice4: "smell",
-        answer: 4,
+        choice4: "sight",
+        answer: 1,
     },
     {
         question: "What is the main diet of sloths?",
@@ -92,13 +93,13 @@ let questions = [
     },
 ];
 
-//CONSTANTS//
-const CORRECT_BONUS = 10;  //How much a right question is worth//
-const MAX_QUESTIONS = 3; // How many questions does a user get - Dont need this// 
+//CONSTANT
+const CORRECT_BONUS = 10;  //How much a right question is worth
+const MAX_QUESTIONS = 3; // How many questions does a user get - Dont need this
 
 //START GAME
 startGame = () => {
-    questioncounter = 0; //Make sure the counter is starting at zero - probably is so may not need this//
+    questioncounter = 0; //Make sure the counter is starting at zero - probably is so may not need this
     score = 0;
     availableQuestions = [...questions];  //To get questions - don't need this
     console.log(availableQuestions);
@@ -123,8 +124,13 @@ getNewQuestion = () => {
 
 choices.forEach((choice) => {
     choice.addEventListener('click', (e) => {
-        console.log(e.target);
-        // if (!acceptingAnswers) return;
+        // console.log(e.target);
+        if (!acceptingAnswers) return;  //If not ready for the player to click the answer
+
+        acceptingAnswers = false;  //To make a delay
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+        getNewQuestion();
     }); 
 });
 
