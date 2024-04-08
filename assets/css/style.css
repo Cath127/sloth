@@ -27,13 +27,10 @@ h4 {
 h1 {
     font-size: 3rem;
     color: #274A27;
-    margin-bottom: 5rem;
     text-align: center;
-    border: 0.3rem solid green;
-    border-radius: 30%;
-    background-color: #edddc6;
     width: 60%;
-    height: 12rem;
+    height: 70%;
+    margin: 0;
   }
 
 h2 {
@@ -80,6 +77,12 @@ h3 {
   .hidden {
     display: none;
   }
+
+/*---------- SLOTH LOGO ----------*/
+.sloth-logo {
+  justify-content: center;
+    align-items: center;
+}
   
 /*---------- QUESTION CONTAINER ----------*/
   .game-container {
@@ -95,6 +98,33 @@ h3 {
  .question-prefix {
   padding: 1.6rem;
  }
+
+ /*---------- CHOICE CONTAINER ----------*/
+.choice-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  border: 0.1rem solid rbg(86,165,235, 0.25);
+  background-color: #fff;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: #56a5eb;
+  color: white;
+}
+
+.choice-text {
+  padding: 1.5rem
+}
 
   /* BUTTONS */
 .btn {
@@ -197,7 +227,6 @@ h3 {
   opacity: 1;
   pointer-events: auto;
 }
-
 
 
 
