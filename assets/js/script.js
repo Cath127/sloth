@@ -3,7 +3,7 @@ const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 
 let currentQuestion = {};
-let acceptingAnswer = true;  //To create a delay - Do I need this?//
+let acceptingAnswer = false;  //To create a delay - Do I need this?//
 let score = 0;  //Always starts at zero//
 let questionCounter = 0; //What questions you are on//
 let availableQuestions = [];  //Copy of full question set and take questions out as we use them to always find a unique question - DO I need this?//
@@ -122,11 +122,10 @@ getNewQuestion = () => {
 }; 
 
 choices.forEach((choice) => {
-    
     choice.addEventListener('click', (e) => {
         console.log(e.target);
+        // if (!acceptingAnswers) return;
     });
 });
-
 
 startGame();
