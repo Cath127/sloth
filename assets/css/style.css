@@ -44,7 +44,7 @@ h3 {
  /*---------- INTRO CONTAINER ----------*/
   #main-container {
     /* background-color:rgba(255,255,255,0.5) */
-    background-color: aqua;
+    /* background-color: aqua; */
     padding: 1.25rem 0;
    position: absolute;
   top: 50%;
