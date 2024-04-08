@@ -28,12 +28,12 @@ let questions = [
         answer: 3,
     },
     {
-        question: "Which is true about sloths fur?",
-        choice1: "It's naturally blue in colour",
-        choice2: "It grows the opposite direction to other mammals",
-        choice3: "It sheds once a year",
-        choice4: "It is resisant to parasites",
-        answer: 2,
+        question: "How many hours can a sloth eat each day?",
+        choice1: "up to 2 hours",
+        choice2: "up to 4 hours",
+        choice3: "up to 6 hours",
+        choice4: "up to 8 hours",
+        answer: 3,
     },
     {
         question: "How heavy is a newborn sloth?",
