@@ -125,7 +125,7 @@ choices.forEach((choice) => {
     choice.addEventListener('click', (e) => {
         console.log(e.target);
         // if (!acceptingAnswers) return;
-    });
+    }); 
 });
 
 startGame();
