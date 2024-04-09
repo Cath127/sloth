@@ -99,7 +99,7 @@ const MAX_QUESTIONS = 3; // How many questions does a user get - Dont need this
 
 //START GAME
 startGame = () => {
-    questioncounter = 0; //Make sure the counter is starting at zero - probably is so may not need this
+    questionCounter = 0; //Make sure the counter is starting at zero - probably is so may not need this
     score = 0;
     availableQuestions = [...questions];  //To get questions - don't need this
     console.log(availableQuestions);
@@ -111,7 +111,7 @@ getNewQuestion = () => {
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);  //To get a random question - may need to put it somewhere else
     currentQuestion = availableQuestions[questionIndex];
-    question.innertext = currentQuestion.question;
+    question.innerText = currentQuestion.question;
 
     choices.forEach((choice) => {
         const number = choice.dataset['number'];
