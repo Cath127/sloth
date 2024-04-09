@@ -17,7 +17,7 @@ let questions = [
         choice2: "20-25 years",
         choice3: "30-35 years",
         choice4: "40-45 years",
-        answer: 2,
+        answer: 2
     },
     {
         question: "How many hours does it take for a sloth to digest a meal?",
@@ -25,7 +25,7 @@ let questions = [
         choice2: "12-24 hours",
         choice3: "36-48 hours",
         choice4: "72-96 hours",
-        answer: 3,
+        answer: 3
     },
     {
         question: "How many hours can a sloth eat each day?",
@@ -33,7 +33,7 @@ let questions = [
         choice2: "up to 4 hours",
         choice3: "up to 6 hours",
         choice4: "up to 8 hours",
-        answer: 3,
+        answer: 3
     },
     {
         question: "How heavy is a newborn sloth?",
@@ -41,7 +41,7 @@ let questions = [
         choice2: "3-5 pounds",
         choice3: "6-8 pounds",
         choice4: "9-11 pounds",
-        answer: 1,
+        answer: 1
     },
     {
         question: "Who is a natural sloth predator?",
@@ -49,7 +49,7 @@ let questions = [
         choice2: "crocodiles",
         choice3: "gorillas",
         choice4: "jaguars",
-        answer: 4,
+        answer: 4
     },
     {
         question: "Where are sloths found in the wild?",
@@ -57,7 +57,7 @@ let questions = [
         choice2: "Asia",
         choice3: "Australia",
         choice4: "Central and South America",
-        answer: 4,
+        answer: 4
     },
     {
         question: "How many hours a day do sloths sleep?",
@@ -65,7 +65,7 @@ let questions = [
         choice2: "10-12 hours",
         choice3: "12-14 hours",
         choice4: "14-16 hours",
-        answer: 3,
+        answer: 3
     },
     {
         question: "How many chambers does a sloth stomach have?",
@@ -73,7 +73,7 @@ let questions = [
         choice2: "2",
         choice3: "3",
         choice4: "4",
-        answer: 2,
+        answer: 2
     },
     {
         question: "Which sense is the best for sloths?",
@@ -81,7 +81,7 @@ let questions = [
         choice2: "taste",
         choice3: "touch",
         choice4: "sight",
-        answer: 1,
+        answer: 1
     },
     {
         question: "What is the main diet of sloths?",
@@ -89,7 +89,7 @@ let questions = [
         choice2: "meat",
         choice3: "fish",
         choice4: "leaves",
-        answer: 4,
+        answer: 4
     },
 ];
 
@@ -102,7 +102,6 @@ startGame = () => {
     questionCounter = 0; //Make sure the counter is starting at zero - probably is so may not need this
     score = 0;
     availableQuestions = [...questions];  //To get questions - don't need this
-    console.log(availableQuestions);
     getNewQuestion();
 };
 
@@ -115,22 +114,41 @@ getNewQuestion = () => {
 
     choices.forEach((choice) => {
         const number = choice.dataset['number'];
-        choice.innerText = currentQuestion['choice' + number];  //To get the right answer using data number
+        choice.innerHTML = currentQuestion['choice' + number];  //To get the right answer using data number
     });
 
     availableQuestions.splice(questionIndex, 1); //Gets rid of the question - may not need this
     acceptingAnswers = true; //Allows user to answer
 }; 
 
+
+
 choices.forEach((choice) => {
     choice.addEventListener('click', (e) => {
-        //console.log(e.target);
         if (!acceptingAnswers) return;  //If not ready for the player to click the answer
 
+        
         acceptingAnswers = false;  //To make a delay
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
-        console.log(selectedAnswer)
+
+       //TO SEE IF THE ANSWER IS CORRECT
+        const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
+        selectedChoice.parentElement.classList.add(classToApply);
+        console.log(classToApply);
+
+        // selectedChoice.parentElement.classList.remove(classToApply);
+
+        // setTimeout(() => {
+        //     selectedChoice.parentElement.classList.remove(classToApply);
+        //     getNewQuestion();
+        //   }, 1000);
+
+      
+        // console.log(selectedAnswer == currentQuestion.answer);
+
+
         getNewQuestion();
     }); 
 });
