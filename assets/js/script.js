@@ -130,7 +130,7 @@ function showQuestion(){
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
-        button.classList.add("btn");
+        button.classList.add("answer-btn");
         answerButtons.appendChild(button);
         if(answer.correct){
             button.dataset.correct = answer.correct;
@@ -138,7 +138,6 @@ function showQuestion(){
         button.addEventListener("click", selectAnswer);
     });
 }
-
 
 function resetState(){
     nextButton.style.display = "none";
