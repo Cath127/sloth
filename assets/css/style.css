@@ -194,6 +194,15 @@ h3 {
     background-color: #edddc6;
   }
 
+  #btn-correct {
+    background-color: greenyellow;
+  }
+
+  #btn-incorrect {
+    background-color: red;
+  }
+
+
   .answer-btn {
     background:  #edddc6;;
     color: #274A27;
